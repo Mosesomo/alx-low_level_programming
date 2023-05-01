@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+void func(void)__attribute__((constructor));
+
 /**
  *func - prints a sentence before the main
  *functions is excuted
