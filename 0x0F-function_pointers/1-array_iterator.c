@@ -6,7 +6,7 @@
 /**
  *array_iterator - prints each element of array
  *@array: array
- *size: how many elements to print
+ *@size: how many elements to print
  *@action: pointer
  *Return: nothing
  */
