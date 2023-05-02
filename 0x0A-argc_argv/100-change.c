@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int num, i, res;
-	int coin[] = {45, 20, 10, 2, 1};
+	int coin[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 		while (num >= coin[i])
 		{
 			res++;
-			num = num - coin[i];
+			num -= coin[i];
 		}
 	}
 	printf("%d\n", res);
