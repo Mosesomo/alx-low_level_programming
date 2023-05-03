@@ -57,24 +57,31 @@ size_t looped_listint_len2(const listint_t *head)
 
 size_t free_listint_safe(listint_t **h)
 {
-	size_t size = 0;
-	int n;
+	size_t nodes, idx;
 	listint_t *temp;
 
-	if (h == NULL || *h == NULL)
-		return (0);
-	while (*h)
+	nodes = looped_listint_len2(*h);
+	if (nodes == 0)
 	{
-		n = *h - (*h)->next;
-		if (n > 0)
+		for (; h != NULL && *h != NULL ; nodes++)
 		{
 			temp = (*h)->next;
 			free(*h);
 			*h = temp;
-			size++;
-			break;
 		}
+
 	}
-	*h = NULL;
-	return (size);
+	else
+	{
+		for (idx = 0 ; idx < nodes ; idx++)
+		{
+			temp = (*h)->next;
+			free(*h);
+			*h = temp;
+		}
+		*h = NULL;
+	}
+	h = NULL;
+	return (nodes);
 }
+
