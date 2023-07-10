@@ -19,8 +19,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == -1)
 		return (0);
 	ptr = malloc(sizeof(char) * letters);
-	if (ptr == NULL)
-		return (0);
 	rd = read(fd, ptr, letters);
 	w = write(1, ptr, rd);
 	free(ptr);
