@@ -5,7 +5,7 @@
  *
  * @dest: finction to copy to
  * @src: function to copy from
- * Retur: string
+ * Return: string
  */
 
 char *_strcpy(char *dest, char *src)
