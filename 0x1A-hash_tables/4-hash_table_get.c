@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- *hash_node_get - retrieves value associated with the key
+ *hash_table_get - retrieves value associated with the key
  *@ht: hash table to look
  *@key: key that is being looked for
  *Return: value associated with the key
@@ -29,5 +29,3 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		return (NULL);
 	return (current->value);
 }
-		
-
